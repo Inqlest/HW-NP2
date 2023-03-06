@@ -94,7 +94,7 @@ class Equilateral : public Triangle {
 public:
 	Equilateral(int a) : Triangle("Равносторонний треугольник", a, a, a, 60, 60, 60) {}
 	bool chek() override {
-		if (a == b == c && A == B == C == 60 && Triangle::chek() == true) {
+		if (a == b && b == c && A == B && B == C && C == 60 && Triangle::chek() == true) {
 			return true;
 		}
 		else {
@@ -129,7 +129,7 @@ class Rectangle : public Quadrangle {
 public:
 	Rectangle(int a, int b) : Quadrangle("Прямоугольник", a, b, a, b, 90, 90, 90, 90){}
 	bool chek() override {
-		if (a == c && b == d && A == B == C == D == 90 && Quadrangle::chek() == true) {
+		if (a == c && b == d && A == B && B == C && C == D && D == 90 && Quadrangle::chek() == true) {
 			return true;
 		}
 		else {
@@ -141,7 +141,7 @@ class Square : public Quadrangle {
 public:
 	Square(int a) : Quadrangle("Квадрат", a, a, a, a, 90, 90, 90, 90){}
 	bool chek() override {
-		if (a == b == c == d && Quadrangle::chek() == true) {
+		if (a == b && b == c && c == d && Quadrangle::chek() == true) {
 			return true;
 		}
 		else {
@@ -167,7 +167,7 @@ class Romb : public Quadrangle {
 public:
 	Romb(int a, int A, int B) : Quadrangle("Ромб", a, a, a, a, A, B, A, B) {}
 	bool chek() override {
-		if (a == b == c == d && Quadrangle::chek() == true) {
+		if (a == b && b == c && c == d && Quadrangle::chek() == true) {
 			return true;
 		}
 		else {
